@@ -12,7 +12,7 @@ class QuoteArray {
     var list = [Quote]()
     
     init() {
-        list.append(Quote(text: "I'll be back", author: "Arnold Schwartzenegger"))
+        list.append(Quote(text: "I'll be back", author: "Arnold Schwarzenegger"))
         
         list.append(Quote(text: "Life's most persistent and urgent question is, 'What are you doing for others?'", author: "Martin Luther King Jr."))
         

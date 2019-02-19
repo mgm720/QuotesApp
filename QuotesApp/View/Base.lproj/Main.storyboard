@@ -34,13 +34,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="authorCell" id="F5v-Of-h8P">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="authorCell" rowHeight="80" id="F5v-Of-h8P" customClass="AuthorTableViewCell" customModule="QuotesApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F5v-Of-h8P" id="mlp-XO-dwQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5S-hT-ocu">
+                                            <rect key="frame" x="20" y="11" width="306" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLV-pe-vh6">
+                                            <rect key="frame" x="334" y="3" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="9Uo-Gk-c7P"/>
+                                                <constraint firstAttribute="height" constant="80" id="OsA-2q-2xb"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="v5S-hT-ocu" secondAttribute="bottom" id="DVC-Lw-9TJ"/>
+                                        <constraint firstItem="WLV-pe-vh6" firstAttribute="top" secondItem="mlp-XO-dwQ" secondAttribute="top" constant="3" id="VEl-SW-y5j"/>
+                                        <constraint firstItem="v5S-hT-ocu" firstAttribute="leading" secondItem="mlp-XO-dwQ" secondAttribute="leadingMargin" id="Z3U-Wg-AxY"/>
+                                        <constraint firstAttribute="bottom" secondItem="WLV-pe-vh6" secondAttribute="bottom" constant="3" id="lro-3N-PP4"/>
+                                        <constraint firstItem="v5S-hT-ocu" firstAttribute="top" secondItem="mlp-XO-dwQ" secondAttribute="topMargin" id="scj-aI-t5O"/>
+                                        <constraint firstItem="WLV-pe-vh6" firstAttribute="leading" secondItem="v5S-hT-ocu" secondAttribute="trailing" constant="8" symbolic="YES" id="uqA-ZZ-3OA"/>
+                                        <constraint firstAttribute="trailing" secondItem="WLV-pe-vh6" secondAttribute="trailing" id="zuO-23-whW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorImage" destination="WLV-pe-vh6" id="NP5-dI-qqa"/>
+                                    <outlet property="authorLabel" destination="v5S-hT-ocu" id="E11-OQ-EeU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -55,7 +83,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMp-IT-Bou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-959" y="-68"/>
+            <point key="canvasLocation" x="-959.4202898550725" y="-68.303571428571431"/>
         </scene>
         <!--Quote Table View Controller-->
         <scene sceneID="Gya-PN-mAv">
@@ -66,23 +94,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quoteCell" id="Va2-tx-Keb" customClass="QuoteTableViewCell" customModule="QuotesApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quoteCell" rowHeight="94" id="Va2-tx-Keb" customClass="QuoteTableViewCell" customModule="QuotesApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Va2-tx-Keb" id="n6E-P9-o03">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="93.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxl-fN-lnW">
-                                            <rect key="frame" x="20" y="13" width="374" height="18"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="72"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="jxl-fN-lnW" secondAttribute="bottom" constant="2" id="8bd-Ds-cEK"/>
-                                        <constraint firstItem="jxl-fN-lnW" firstAttribute="top" secondItem="n6E-P9-o03" secondAttribute="topMargin" constant="2" id="Njq-1r-2h7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="jxl-fN-lnW" secondAttribute="bottom" id="8bd-Ds-cEK"/>
+                                        <constraint firstItem="jxl-fN-lnW" firstAttribute="top" secondItem="n6E-P9-o03" secondAttribute="topMargin" id="Njq-1r-2h7"/>
                                         <constraint firstItem="jxl-fN-lnW" firstAttribute="leading" secondItem="n6E-P9-o03" secondAttribute="leadingMargin" id="YNH-fy-l6g"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="jxl-fN-lnW" secondAttribute="trailing" id="Yc1-bK-mQc"/>
                                     </constraints>
@@ -100,7 +128,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ij-bp-11S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-19" y="-68"/>
+            <point key="canvasLocation" x="-20.289855072463769" y="-68.303571428571431"/>
         </scene>
     </scenes>
 </document>

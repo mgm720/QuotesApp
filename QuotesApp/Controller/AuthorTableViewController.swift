@@ -31,9 +31,12 @@ class AuthorTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "authorCell", for: indexPath)
-
-        cell.textLabel?.text = array[indexPath.row].authorName
+        let cell = tableView.dequeueReusableCell(withIdentifier: "authorCell", for: indexPath) as! AuthorTableViewCell
+        let name = array[indexPath.row].authorName
+        
+        cell.authorLabel.text = name
+        
+        cell.authorImage.image = UIImage(named: name)
         
         return cell
     }
