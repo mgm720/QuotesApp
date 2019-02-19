@@ -8,9 +8,17 @@
 
 import Foundation
 
-class Quote {
+class Quote : Hashable {
+    
     let quoteText : String
     let authorName : String
+    
+    func hash(into hasher: inout Hasher) {
+    }
+    
+    static func == (lhs: Quote, rhs: Quote) -> Bool {
+        return lhs.authorName == rhs.authorName
+    }
     
     init(text : String, author : String) {
         quoteText = text

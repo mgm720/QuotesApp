@@ -10,12 +10,16 @@ import UIKit
 
 class QuoteTableViewController: UITableViewController {
     
-    let quotes = QuoteArray().list
+    var quotes = QuoteArray().list
+    
+    var selectedAuthor = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.title = "Quotes"
+        self.title = "Quotes"
+        
+        filterResultsByAuthor()
     }
 
     // MARK: - Table view data source
@@ -36,6 +40,12 @@ class QuoteTableViewController: UITableViewController {
         cell.textLabel?.text = quotes[indexPath.row].quoteText
 
         return cell
+    }
+    
+    func filterResultsByAuthor() {
+        quotes = quotes.filter { (Quote) -> Bool in
+            Quote.authorName.contains(selectedAuthor)
+        }
     }
     
 
