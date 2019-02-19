@@ -66,13 +66,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quoteCell" id="Va2-tx-Keb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quoteCell" id="Va2-tx-Keb" customClass="QuoteTableViewCell" customModule="QuotesApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Va2-tx-Keb" id="n6E-P9-o03">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Va2-tx-Keb" id="n6E-P9-o03">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxl-fN-lnW">
+                                            <rect key="frame" x="20" y="13" width="374" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="jxl-fN-lnW" secondAttribute="bottom" constant="2" id="8bd-Ds-cEK"/>
+                                        <constraint firstItem="jxl-fN-lnW" firstAttribute="top" secondItem="n6E-P9-o03" secondAttribute="topMargin" constant="2" id="Njq-1r-2h7"/>
+                                        <constraint firstItem="jxl-fN-lnW" firstAttribute="leading" secondItem="n6E-P9-o03" secondAttribute="leadingMargin" id="YNH-fy-l6g"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jxl-fN-lnW" secondAttribute="trailing" id="Yc1-bK-mQc"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="quoteLabel" destination="jxl-fN-lnW" id="xgK-2H-1Rb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

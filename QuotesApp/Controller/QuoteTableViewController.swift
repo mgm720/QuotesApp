@@ -13,13 +13,16 @@ class QuoteTableViewController: UITableViewController {
     var quotes = QuoteArray().list
     
     var selectedAuthor = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Quotes"
         
         filterResultsByAuthor()
+        
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
     }
 
     // MARK: - Table view data source
@@ -35,10 +38,10 @@ class QuoteTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath)
-
-        cell.textLabel?.text = quotes[indexPath.row].quoteText
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath) as! QuoteTableViewCell
+        
+        cell.quoteLabel.text = quotes[indexPath.row].quoteText
+        
         return cell
     }
     
@@ -47,6 +50,5 @@ class QuoteTableViewController: UITableViewController {
             Quote.authorName.contains(selectedAuthor)
         }
     }
-    
 
 }
