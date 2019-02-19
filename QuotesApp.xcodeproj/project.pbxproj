@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5CC01E3D221605AF00D4FB19 /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC01E3C221605AF00D4FB19 /* QuoteTableViewController.swift */; };
+		5CC01E3F2217D3CD00D4FB19 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC01E3E2217D3CD00D4FB19 /* Quote.swift */; };
+		5CC01E412217D47500D4FB19 /* QuoteArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC01E402217D47500D4FB19 /* QuoteArray.swift */; };
 		5CDCF97222136E6200E3CA19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF97122136E6200E3CA19 /* AppDelegate.swift */; };
 		5CDCF97722136E6200E3CA19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDCF97522136E6200E3CA19 /* Main.storyboard */; };
 		5CDCF97922136E6300E3CA19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDCF97822136E6300E3CA19 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		5CC01E3C221605AF00D4FB19 /* QuoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
+		5CC01E3E2217D3CD00D4FB19 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		5CC01E402217D47500D4FB19 /* QuoteArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteArray.swift; sourceTree = "<group>"; };
 		5CDCF96E22136E6200E3CA19 /* QuotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDCF97122136E6200E3CA19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CDCF97622136E6200E3CA19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			children = (
 				5CDCF97122136E6200E3CA19 /* AppDelegate.swift */,
 				5CDCF97522136E6200E3CA19 /* Main.storyboard */,
+				5CC01E3E2217D3CD00D4FB19 /* Quote.swift */,
+				5CC01E402217D47500D4FB19 /* QuoteArray.swift */,
 				5CC01E3C221605AF00D4FB19 /* QuoteTableViewController.swift */,
 				5CDCF97822136E6300E3CA19 /* Assets.xcassets */,
 				5CDCF97A22136E6300E3CA19 /* LaunchScreen.storyboard */,
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC01E412217D47500D4FB19 /* QuoteArray.swift in Sources */,
 				5CC01E3D221605AF00D4FB19 /* QuoteTableViewController.swift in Sources */,
+				5CC01E3F2217D3CD00D4FB19 /* Quote.swift in Sources */,
 				5CDCF97222136E6200E3CA19 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
